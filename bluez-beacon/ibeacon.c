@@ -56,6 +56,7 @@ int enable_advertising(int advertising_interval, char *advertising_uuid, int maj
   memset(&adv_params_cp, 0, sizeof(adv_params_cp));
   adv_params_cp.min_interval = htobs(advertising_interval);
   adv_params_cp.max_interval = htobs(advertising_interval);
+  adv_params_cp.advtype = 3;   //do not connected
   adv_params_cp.chan_map = 7;
 
   uint8_t status;
